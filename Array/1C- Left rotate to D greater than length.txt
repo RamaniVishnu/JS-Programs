@@ -1,0 +1,16 @@
+function rotateLeft(arr,rotate){
+if(rotate > arr.length){
+rotate = rotate % arr.length;
+}
+console.log("rotate===",rotate)
+for(let j=0;j<rotate;j++){
+let tmp=arr[0];
+for(let i=1;i<arr.length;i++){
+arr[i-1]=arr[i];
+}
+arr[arr.length-1] = tmp;
+}
+return arr;
+}
+
+console.log(rotateLeft(["first",5,8,3,"five",3,5],200));
